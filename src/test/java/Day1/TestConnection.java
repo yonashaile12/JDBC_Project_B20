@@ -31,5 +31,22 @@ public class TestConnection {
         rs.next(); // this will move us to next row so we can read next row
         System.out.println("Region_ID at this roe is: "+ rs.getString("REGION_ID"));
         System.out.println("Region_NAME at this roe is: "+ rs.getString("REGION_NAME"));
+        //what if we want to keep moving?
+
+        rs.next(); // this will move us to next row so we can read next row
+
+        System.out.println("Region_ID at this roe is: "+ rs.getString("REGION_ID"));
+        System.out.println("Region_NAME at this roe is: "+ rs.getString("REGION_NAME"));
+
+        rs.next(); // this will move us to next row so we can read next row
+
+        System.out.println("Region_ID at this roe is: "+ rs.getString("REGION_ID"));
+        System.out.println("Region_NAME at this roe is: "+ rs.getString("REGION_NAME"));
+
+        rs.next(); // this will move us to next row so we can read next row
+
+        System.out.println("Region_ID at this roe is: "+ rs.getString("REGION_ID"));
+        System.out.println("Region_NAME at this roe is: "+ rs.getString("REGION_NAME"));
+
     }
 }
