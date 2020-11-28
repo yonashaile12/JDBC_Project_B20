@@ -8,9 +8,8 @@
     <artifactId>JDBC_Project_B20</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
     <!-- IMPORTANT : right click pom file here,
-    Select maven from the list and select Reload Project-->
+   Select maven from the list and select Reload Project-->
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
@@ -37,23 +36,13 @@
             <artifactId>ojdbc8</artifactId>
             <version>19.3.0.0</version>
         </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.21</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.1</version>
-        </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.6.3</version>
         </dependency>
-    </dependencies>
 
+    </dependencies>
 
 </project>
