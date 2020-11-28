@@ -13,9 +13,9 @@ public class DB_Utility {
     static ResultSet rs  = null;
     public static void createConnection(){
 
-        String connectionStr = "jdbc:oracle:thin:@34.207.119.202:1521:XE";
-        String username = "hr" ;
-        String password = "hr" ;
+        String connectionStr = ConfigurationReader.getProperty("database.url");
+        String username = ConfigurationReader.getProperty("database.username") ;
+        String password = ConfigurationReader.getProperty("database.password") ;
 
         try {
             conn = DriverManager.getConnection(connectionStr,username,password) ;

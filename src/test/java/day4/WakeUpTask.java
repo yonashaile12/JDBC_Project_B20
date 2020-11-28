@@ -43,6 +43,9 @@ public class WakeUpTask {
         System.out.println("DB_Utility.getColumnNames() = \n\t"
                 + DB_Utility.getColumnNames());
 
+        DB_Utility.runQuery("SELECT * FROM COUNTRIES");
+        DB_Utility.displayAllData();
+
         DB_Utility.destroy();
 
     }
