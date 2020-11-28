@@ -225,13 +225,16 @@ public class DB_Utility {
      * A method that display all the result set data on console
      */
     public static void displayAllData(){
+
         try {
             rs.beforeFirst();
 
             while (rs.next()) {
 
                 for (int colNum = 1; colNum <= getColumnCount(); colNum++) {
-                    System.out.print(rs.getString(colNum) + "\t");
+//                    System.out.print(rs.getString(colNum) + "\t");
+                    //  for making it pretty
+                    System.out.printf("%-35s", rs.getString(colNum));
                 }
                 System.out.println();
             }
@@ -241,6 +244,12 @@ public class DB_Utility {
             System.out.println("ERROR WHILE PRINTING WHOLE TABLE " + e.getMessage());
         }
     }
+
+    /**
+     * A method that return the row data along with column name as Map object
+     * @param rowNum row numebr you want to get the data
+     * @return Map object -- column name as key and cell value as value
+     */
 
     /**
      * A method that return the row data along with column name as Map object
