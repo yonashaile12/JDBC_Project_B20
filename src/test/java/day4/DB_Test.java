@@ -18,7 +18,7 @@ public class DB_Test {
         // run a query SELECT * FROM EMPLOYEES
         // assert that the employees count is 107
         DB_Utility.runQuery("SELECT * FROM EMPLOYEES") ;
-        //Assertions.assertEquals(107,  DB_Utility.getRowCount()  );
+        Assertions.assertEquals(107,  DB_Utility.getRowCount()  );
 
 
     }
@@ -27,9 +27,9 @@ public class DB_Test {
     // assert -- 3rd row second column is Asia
     @Test
     public void test3rdRowSecondColumn(){
-
+        DB_Utility.createConnection();
         DB_Utility.runQuery("SELECT * FROM REGIONS") ;
-       // Assertions.assertEquals("Asia" , DB_Utility.getColumnDataAtRow(3,2) );
+        Assertions.assertEquals("Asia" , DB_Utility.getColumnDataAtRow(3,2) );
 
     }
 

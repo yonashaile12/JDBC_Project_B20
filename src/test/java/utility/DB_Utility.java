@@ -24,6 +24,22 @@ public class DB_Utility {
 
     }
 
+    // MAKE ABOVE METHOD ACCEPT 3 PARAMETERS
+    public static void createConnection(String connectionStr,String username,String password ) {
+
+//        String connectionStr = ConfigurationReader.getProperty("database.url");
+//        String username = ConfigurationReader.getProperty("database.username");
+//        String password = ConfigurationReader.getProperty("database.password");
+
+        try {
+            conn = DriverManager.getConnection(connectionStr, username, password);
+            System.out.println("CONNECTION SUCCESSFUL !! ");
+        } catch (SQLException e) {
+            System.out.println("CONNECTION HAS FAILED !!! " + e.getMessage());
+        }
+
+    }
+
     // Create a method called runQuery that accept a SQL Query
     // and return ResultSet Object
     public static ResultSet runQuery(String query) {
