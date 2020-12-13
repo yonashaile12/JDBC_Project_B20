@@ -1,5 +1,8 @@
 package Day1;
 
+import utility.ConfigurationReader;
+import utility.DB_Utility;
+
 import java.sql.*;
 
 public class MovingResultSetPointer {
@@ -8,10 +11,10 @@ public class MovingResultSetPointer {
     public static void main(String[] args) throws SQLException {
         //we want to create a statement object that generate
         //ResultSet that can move FORWARD AND BACKWARD ANYTIME
-        String connectionStr = "jdbc:oracle:thin:@34.207.119.202:1521:XE";
-        String username = "hr";
-        String password = "hr";
-
+        String connectionStr = ConfigurationReader.getProperty("database.url");
+        String username = ConfigurationReader.getProperty("database.username");
+        String password = ConfigurationReader.getProperty("database.password");
+        //DB_Utility.createConnection();
         Connection conn = DriverManager.getConnection(connectionStr,username,password) ;
         //this way of creating
         Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
